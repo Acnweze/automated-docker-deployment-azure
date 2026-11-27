@@ -77,3 +77,23 @@ Expected response:
 ## Objective
 
 To demonstrate practical skills in Docker containerization, CI/CD automation, GitHub Actions, container registry management, Linux administration, and Azure cloud deployment.
+
+## Screenshots
+
+### 1. Docker Image Build and HTTP Test
+![Docker build and HTTP test](Screenshot%202026-11-26%20171934.jpg)
+
+### 2. Docker Image Inventory
+![Docker image inventory](Screenshot%202026-11-26%20172025.jpg)
+
+### 3. Initial Container Deployment
+![Initial container deployment](Screenshot%202026-11-26%20172204.jpg)
+
+### 4. Git Push
+![Git push](Screenshot%202026-11-26%20172607.jpg)
+
+### 5. GHCR Container Status
+![GHCR container running](Screenshot%202026-11-27%20125721.jpg)
+
+### 6. GHCR Application Verification
+![GHCR application verification](Screenshot%202026-11-27%20130435.jpg)
