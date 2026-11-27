@@ -81,19 +81,19 @@ To demonstrate practical skills in Docker containerization, CI/CD automation, Gi
 ## Screenshots
 
 ### 1. Docker Image Build and HTTP Test
-![Docker build and HTTP test](Screenshot%202026-11-26%20171934.jpg)
+![Docker build and HTTP test](screenshots/01-docker-build-and-http-test.jpg)
 
 ### 2. Docker Image Inventory
-![Docker image inventory](Screenshot%202026-11-26%20172025.jpg)
+![Docker image inventory](screenshots/02-docker-image-inventory.jpg)
 
 ### 3. Initial Container Deployment
-![Initial container deployment](Screenshot%202026-11-26%20172204.jpg)
+![Initial container deployment](screenshots/03-local-container-deployment.jpg)
 
 ### 4. Git Push
-![Git push](Screenshot%202026-11-26%20172607.jpg)
+![Git push](screenshots/04-initial-git-push.jpg)
 
 ### 5. GHCR Container Status
-![GHCR container running](Screenshot%202026-11-27%20125721.jpg)
+![GHCR container running](screenshots/05-ghcr-container-status.jpg)
 
 ### 6. GHCR Application Verification
-![GHCR application verification](Screenshot%202026-11-27%20130435.jpg)
+![GHCR application verification](screenshots/06-ghcr-application-verification.jpg)
