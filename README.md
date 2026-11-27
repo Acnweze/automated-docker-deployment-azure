@@ -1,8 +1,8 @@
-# Automated Docker Deployment to Azure VM
+# Automated Docker Deployment with Azure
 
 ## Project Overview
 
-This project demonstrates the containerization and automated deployment of a Node.js application using Docker, GitHub Actions, GitHub Container Registry (GHCR), and an Ubuntu-based Azure Virtual Machine.
+This project demonstrates the containerization and automated publishing of a Node.js application using Docker, GitHub Actions, and GitHub Container Registry (GHCR), with Azure Virtual Machine deployment planned as the next phase.
 
 ## Architecture
 
@@ -10,33 +10,70 @@ This project demonstrates the containerization and automated deployment of a Nod
 - **Application:** Node.js
 - **Containerization:** Docker
 - **CI/CD:** GitHub Actions
-- **Container Registry:** GitHub Container Registry
-- **Deployment Environment:** Azure Virtual Machine (Ubuntu Server 24.04.5 LTS)
+- **Container Registry:** GitHub Container Registry (GHCR)
+- **Planned Deployment Environment:** Ubuntu Server 24.04.5 LTS on Azure Virtual Machine
 
-## Current Implementation
+## Completed Implementation
 
 - Developed a Node.js HTTP application.
 - Created a Dockerfile using Node.js 24 Alpine.
-- Built a Docker image.
-- Launched the application in a Docker container.
-- Verified application availability through HTTP requests.
+- Built and tested the Docker image.
+- Created a GitHub Actions workflow to automate image building and publishing.
+- Published the Docker image to GHCR.
+- Pulled the published image from GHCR.
+- Launched a container using the published image.
+- Verified application availability through an HTTP request.
 
 ## Container Configuration
 
 | Setting | Value |
 |---|---|
-| Image | azure-devops-deployment:v1 |
-| Container | azure-devops-app |
-| Container port | 3000 |
-| Host port | 3001 |
+| Published image | `ghcr.io/acnweze/azure-devops-deployment:latest` |
+| Container name | `ghcr-deployment-app` |
+| Application port | `3000` |
+| Host port | `3002` |
+| Registry | GitHub Container Registry |
+| Test environment | GitHub Codespaces |
+
+## CI/CD Workflow
+
+The GitHub Actions workflow:
+
+1. Checks out the repository.
+2. Authenticates with GitHub Container Registry.
+3. Builds the Docker image from the `app` directory.
+4. Publishes the image to GHCR.
+5. Tags the image as `latest` and with the commit SHA.
+
+## Application Verification
+
+The published image was successfully pulled and launched in GitHub Codespaces.
+
+Test command:
+
+```bash
+curl http://localhost:3002
+```
+
+Expected response:
+
+```json
+{
+  "application": "Azure DevOps Deployment Lab",
+  "status": "Running",
+  "environment": "Docker",
+  "server": "Azure Virtual Machine",
+  "message": "Successfully deployed using CI/CD!"
+}
+```
 
 ## Upcoming Implementation
 
-- Publish Docker images to GHCR.
-- Configure GitHub Actions CI/CD.
-- Automate deployment to Azure VM.
-- Verify the deployed application.
+- Deploy the published Docker image to the Azure Virtual Machine.
+- Configure remote container deployment.
+- Verify application accessibility from the Azure VM.
+- Document the complete deployment process.
 
 ## Objective
 
-To demonstrate practical skills in containerization, CI/CD automation, Linux server administration, and cloud deployment.# automated-docker-deployment-azure
+To demonstrate practical skills in Docker containerization, CI/CD automation, GitHub Actions, container registry management, Linux administration, and Azure cloud deployment.
